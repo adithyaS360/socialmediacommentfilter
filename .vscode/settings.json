@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "apache-tomcat-9.0.88/lib/servlet-api.jar",
+        "apache-tomcat-9.0.88/webapps/comments-app/WEB-INF/lib/sqlite-jdbc.jar"
+    ]
+}
