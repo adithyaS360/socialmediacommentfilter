@@ -18,14 +18,8 @@ public class CommentServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String action = request.getParameter("action");
-        if ("sort".equals(action)) {
-            manager.sortComments();
-        }
-        
-        // Pass the list of comments to the JSP
-        request.setAttribute("comments", manager.getComments());
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        // Forward to JSP without loading comments initially
+        request.getRequestDispatcher("/comments.jsp").forward(request, response);
     }
 
     @Override
@@ -33,6 +27,7 @@ public class CommentServlet extends HttpServlet {
         String username = request.getParameter("username");
         String commentText = request.getParameter("commentText");
         String likesStr = request.getParameter("likes");
+        String viewing = request.getParameter("viewing");
 
         try {
             int likes = Integer.parseInt(likesStr);
@@ -48,11 +43,14 @@ public class CommentServlet extends HttpServlet {
 
         // If there's an error, forward to the JSP so the error message is displayed
         if (request.getAttribute("error") != null) {
-            request.setAttribute("comments", manager.getComments());
-            request.getRequestDispatcher("/index.jsp").forward(request, response);
+            request.getRequestDispatcher("/comments.jsp").forward(request, response);
         } else {
-            // Redirect to GET to prevent form resubmission on refresh
-            response.sendRedirect("comments");
+            // Redirect based on previous viewing state
+            if ("true".equals(viewing)) {
+                response.sendRedirect("viewComments");
+            } else {
+                response.sendRedirect("comments");
+            }
         }
     }
 }
