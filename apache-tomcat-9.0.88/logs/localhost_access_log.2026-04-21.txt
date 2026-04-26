@@ -71,3 +71,11 @@
 0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:27:46 +0530] "GET /socialmediacomment/comments HTTP/1.1" 200 8458
 0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:27:48 +0530] "GET /socialmediacomment/sortComments HTTP/1.1" 200 12077
 0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:27:50 +0530] "GET /socialmediacomment/comments HTTP/1.1" 200 8458
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:48:54 +0530] "GET /socialmediacomment/login HTTP/1.1" 200 7455
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:49:10 +0530] "POST /socialmediacomment/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:49:11 +0530] "GET /socialmediacomment/comments HTTP/1.1" 200 10489
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:56:42 +0530] "GET /socialmediacomment/login HTTP/1.1" 200 7455
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:56:52 +0530] "POST /socialmediacomment/login HTTP/1.1" 200 7542
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:56:57 +0530] "POST /socialmediacomment/login HTTP/1.1" 200 7542
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:57:02 +0530] "POST /socialmediacomment/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [21/Apr/2026:17:57:02 +0530] "GET /socialmediacomment/comments HTTP/1.1" 200 10489
