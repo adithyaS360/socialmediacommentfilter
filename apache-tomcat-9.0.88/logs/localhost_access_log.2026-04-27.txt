@@ -1,0 +1,7 @@
+0:0:0:0:0:0:0:1 - - [27/Apr/2026:10:53:22 +0530] "GET /socialmediacomment/login HTTP/1.1" 200 2885
+0:0:0:0:0:0:0:1 - - [27/Apr/2026:10:53:22 +0530] "GET /socialmediacomment/assets/style.css HTTP/1.1" 200 12392
+0:0:0:0:0:0:0:1 - - [27/Apr/2026:10:53:40 +0530] "POST /socialmediacomment/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [27/Apr/2026:10:53:40 +0530] "GET /socialmediacomment/comments HTTP/1.1" 200 3580
+0:0:0:0:0:0:0:1 - - [27/Apr/2026:10:54:26 +0530] "GET /socialmediacomment/viewComments HTTP/1.1" 200 8046
+0:0:0:0:0:0:0:1 - - [27/Apr/2026:10:54:42 +0530] "GET /socialmediacomment/sortComments HTTP/1.1" 200 8046
+0:0:0:0:0:0:0:1 - - [27/Apr/2026:10:54:44 +0530] "GET /socialmediacomment/sortComments HTTP/1.1" 200 8046
