@@ -15,7 +15,7 @@ RUN mkdir -p /usr/local/tomcat/webapps/ROOT/WEB-INF/classes
 
 # Compile the Java Servlets
 # Note: Linux uses a colon ':' to separate classpath jars instead of a semicolon ';'
-RUN javac -cp "/usr/local/tomcat/lib/servlet-api.jar:/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/sqlite-jdbc.jar" \
+RUN javac -cp "/usr/local/tomcat/lib/servlet-api.jar:/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/sqlite-jdbc.jar:/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/postgresql-42.7.3.jar" \
     -d /usr/local/tomcat/webapps/ROOT/WEB-INF/classes \
     /usr/src/myapp/src/com/social/*.java
 

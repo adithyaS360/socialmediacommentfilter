@@ -4,15 +4,14 @@ import java.util.*;
 import java.sql.*;
 
 public class CommentManager {
-    private static final String DB_URL = "jdbc:sqlite:comments.db";
-
+    private static final String DB_URL = "jdbc:postgresql://db.guaascekpywutghiviiz.supabase.co:5432/postgres?user=postgres&password=Subzero@1235678";
     public CommentManager() {
         try {
-            Class.forName("org.sqlite.JDBC");
+            Class.forName("org.postgresql.Driver");
             try (Connection conn = DriverManager.getConnection(DB_URL);
-                 Statement stmt = conn.createStatement()) {
+                Statement stmt = conn.createStatement()) {
                 String sql = "CREATE TABLE IF NOT EXISTS comments (" +
-                             "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                             "id SERIAL PRIMARY KEY," +
                              "username TEXT NOT NULL," +
                              "comment_text TEXT NOT NULL," +
                              "likes INTEGER DEFAULT 0)";
