@@ -4,7 +4,7 @@ import java.util.*;
 import java.sql.*;
 
 public class CommentManager {
-    private static final String DB_URL = "jdbc:postgresql://db.guaascekpywutghiviiz.supabase.co:5432/postgres?user=postgres&password=Subzero@1235678";
+    private static final String DB_URL = "jdbc:postgresql://aws-1-ap-southeast-2.pooler.supabase.com:5432/postgres?user=postgres.guaascekpywutghiviiz&password=Subzero@1235678";
     public CommentManager() {
         try {
             Class.forName("org.postgresql.Driver");
